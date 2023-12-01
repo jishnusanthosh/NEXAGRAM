@@ -1,12 +1,12 @@
 import React from 'react';
 import LogoAndSlogan from '../../Components/User/logoAndSlogan';
-import SignUpButton from '../../Components/User/Buttons/SignUpButton';
+import SignInButton from '../../Components/User/Buttons/SignInButton';
 import GoogleButton from '../../Components/User/Buttons/GoogleButton';
 import FacebookButton from '../../Components/User/Buttons/FacebookButton';
 import '../../Assets/Styles/tailwind.css';
 
-// SignUp functional component
-const SignUp = () => {
+// SignIn functional component
+const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your form submission logic here
@@ -27,7 +27,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col justify-center items-center py-10">
+    <div className="bg-indigo-500 min-h-screen flex flex-col justify-center items-center py-10">
       <div className="flex flex-col md:flex-row h-full">
         {/* Left Section - Logo and Slogan */}
         <LogoAndSlogan />
@@ -35,7 +35,7 @@ const SignUp = () => {
         {/* Right Section - SignUp Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-slate-500 flex w-[618px] max-w-full flex-col items-center  pb-9 px-10 rounded-3xl"
+          className="bg-white flex w-[618px] max-w-full flex-col items-center  pb-9 px-10 rounded-3xl"
         >
           <div className="flex w-[410px] max-w-full flex-col items-center mb-9">
             <div className="self-stretch">
@@ -51,7 +51,7 @@ const SignUp = () => {
                         className="aspect-[0.40] object-contain object-center w-full h-[190px] overflow-hidden"
                       />
                     </div>
-                    <div className="text-black text-3xl font-bold">Sign Up</div>
+                    <div className="text-black text-3xl font-bold">Sign In</div>
                     <div className="text-black text-xl font-semibold ml-4  self-start md:ml-2.5 md:mt-4">
                       E-mail
                     </div>
@@ -67,9 +67,10 @@ const SignUp = () => {
             />
             <div className="flex w-[382px] max-w-full justify-between gap-5 items-start">
               <div className="text-black text-xl font-semibold">Password</div>
-              
+              <div className="text-indigo-700 text-base font-semibold">
+                forgot password ?
+              </div>
             </div>
-            
             {/* Password input */}
             <input
               type="password"
@@ -77,9 +78,8 @@ const SignUp = () => {
               className="shadow-sm bg-slate-100 self-stretch flex items-stretch justify-between gap-5  pl-4 pr-9 py-4 rounded-3xl md:pr-5"
             />
           </div>
-          
 
-          <SignUpButton onClick={handleSubmit} />
+          <SignInButton onClick={handleSubmit} />
           <br />
           <GoogleButton onClick={handleGoogleSignIn} />
           <br />
@@ -91,4 +91,4 @@ const SignUp = () => {
 };
 
 // Exporting the SignUp component
-export default SignUp;
+export default SignIn;

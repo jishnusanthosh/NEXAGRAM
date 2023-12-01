@@ -1,13 +1,10 @@
+// App.js
+import React from 'react';
+import appRouter from './routes/appRouter.jsx';
+import './Assets/Styles/tailwind.css' // Adjust the path accordingly
 
-import './Assets/Styles/tailwind.css'
-
-
-function App() {
-  return (
-    <div className="App">
-     
-    </div>
-  );
-}
+const App = () => {
+  return <React.StrictMode>{appRouter}</React.StrictMode>;
+};
 
 export default App;
