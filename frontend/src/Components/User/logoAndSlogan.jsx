@@ -1,20 +1,18 @@
-import React from 'react';
+import React from "react";
 
 const LogoAndSlogan = () => {
   return (
-    <div className="w-full md:w-6/12 md:ml-5 mb-10">
+    <div className="w-full md:w-7/12 md:ml-5 mb-10 mt-12  items-center flex">
       <img
         loading="lazy"
         alt="logo"
-        src="logo.png"
-        className="relative  aspect-[1.43] object-cover object-center pr-13 w-[500px] overflow-hidden"
+        src="NewLogo.png"
+        className="relative object-cover object-center pr-13 w-[120px] overflow-hidden"
       />
-      <span className="relative flex-col text-white  text-5xl font-bold">
-        Let’s Explore 
-        the world together
-        <br/>
-        <span className='text-gray-400' >Join now</span>
-      </span>
+      <div className="ml-4 flex-col">
+        <span className="text-white text-7xl font-bold">N</span>
+        <span className="text-white text-3xl font-bold">EXAGRAM</span>
+      </div>
     </div>
   );
 };
