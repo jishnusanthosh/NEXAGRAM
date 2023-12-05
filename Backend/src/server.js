@@ -1,6 +1,9 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRoutes from './routes/user.js';
+import authRoutes from './routes/auth.js';
+import cors from 'cors';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -23,10 +26,13 @@ db.once('open', () => {
     console.log('Connected to MongoDB');
 });
 
-// Basic route
-app.get('/', (req, res) => {
-    res.send('Hello, MERN stack developer!');
-});
+// Middleware
+app.use(express.json());
+app.use(cors());
+
+// Routes
+app.use('/api/users', userRoutes);
+app.use('/api/auth', authRoutes);
 
 // Start the server
 app.listen(PORT, () => {
