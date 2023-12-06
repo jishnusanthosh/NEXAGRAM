@@ -67,7 +67,7 @@ import SignIn from "../../pages/user/SignIn";
 //   }
 
  export const userSignIn ={
-    path:"/Signin",
+    path:"/signin",
     element:<SignIn/>
   }
 //   export const userForgotPassword ={
